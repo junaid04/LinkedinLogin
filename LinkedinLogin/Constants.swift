@@ -9,11 +9,8 @@
 import UIKit
 
 class Constants {
-    
     let linkedinKey = ""
     let linkedinSecret = ""
     let authorizationEndPoint = "https://www.linkedin.com/uas/oauth2/authorization"
     let accessTokenEndPoint = "https://www.linkedin.com/uas/oauth2/accessToken"
-
-
 }

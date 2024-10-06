@@ -9,13 +9,13 @@
 import UIKit
 
 class LinkedinLoginController: UIViewController,UIWebViewDelegate {
-
+    
     @IBOutlet weak var webView: UIWebView!
     let indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         startAuthorization()
@@ -25,7 +25,7 @@ class LinkedinLoginController: UIViewController,UIWebViewDelegate {
         indicator.color = UIColor.black
         webView.addSubview(indicator)
     }
-
+    
     func startAuthorization() {
         // Specify the response type which should always be "code".
         let responseType = "code"
@@ -111,7 +111,7 @@ class LinkedinLoginController: UIViewController,UIWebViewDelegate {
                     print("Could not convert JSON data into a dictionary.")
                 }
             }
-        }) 
+        })
         
         task.resume()
     }
@@ -123,7 +123,7 @@ class LinkedinLoginController: UIViewController,UIWebViewDelegate {
     
     func webViewDidStartLoad(_ webView: UIWebView) {
         
-         indicator.startAnimating()
+        indicator.startAnimating()
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
@@ -150,5 +150,4 @@ class LinkedinLoginController: UIViewController,UIWebViewDelegate {
         return true
     }
     
-
 }
